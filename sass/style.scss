@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
+@import 'reset';
+@import 'mixin';
+@import 'conf';
+
+    body{
+        @include flex ($flx,$jstfy-cntr,$algn-cntr);
+        @include text ($clr-200,linear-gradient(45deg,$clr-400,$clr-300),$algn-strt);
+        @include font ($ff-1,$fs-12,$fw-4);
+        
+
+        main{
+            background-color: white;
+            width: 85%;
+            border-radius: 1.5rem;
+            margin-top: 8rem;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+
+            @media (min-width:700px){
+                grid-template-columns: 1fr 1fr;
+                margin-top: 0;
+                width:60%;
+            }
+
+            picture{
+                position: relative;
+
+                @media (min-width:700px){
+                    grid-template-columns: 1fr 1fr;
+                    margin-top: 0;
+                    overflow: hidden;
+
+                }
+
+                .pattern-mb{
+                    position: absolute;
+                    left:50%;
+                    transform: translate(-50%,0%);
+                    width: 75%;
+
+                    @media (min-width:700px){
+                        display:none;
+                    }  
+                }
+
+                .pattern-dt{
+                    display:none;
+                    
+                    @media (min-width:700px){
+                        display:block;
+                        position: absolute;
+                        width:180%;
+                        bottom:-27%;
+                        left:-96%;
+                    } 
+                }
+
+                .woman{
+                    position: absolute;
+                    width: 75%;
+                    top:0;
+                    left:50%;
+                    transform: translate(-50%,-60%);
+
+                    @media (min-width:700px){
+                        width: 100%;
+                        top:46%;
+                        left:-17%;
+                        transform: translate(0,-50%);
+                    } 
+                }
+            }
+
+            .box{
+                display: none;
+
+                @media (min-width:700px){
+                    display: block; 
+                    position: absolute;
+                    left:-13%;
+                    top:35%;              
+                 } 
+  
+            }
+
+            section{
+                padding-bottom: 2rem;
+                border-radius: 1.5rem;
+
+                @media (min-width:700px){
+                    @include text($clr-200,inherit,$algn-strt);
+                    padding:2rem 4.3rem 4rem 0rem;               
+                 } 
+                
+
+                h1{
+                    @include font(inherit,2rem,$fw-7);
+                    @include text($clr-200,inherit,$algn-cntr);
+                    padding:7rem 0 1rem;
+
+                    @media (min-width:700px){
+                        @include text($clr-200,inherit,$algn-strt);
+                        padding:0;
+                    } 
+                }
+
+                ul{
+                    padding-inline: 1.6rem;
+
+                    @media (min-width:700px){
+                        padding:0;
+                    }
+
+                    li{
+                        border-bottom: 1px solid $clr-700;
+
+                        a{
+                            @include text($clr-500,white,start);
+                            padding-block: 0.8rem;
+                            display: grid;
+                            grid-template-columns: 1fr 10px;
+                            align-items: center;
+
+                            &:hover{
+                                color:$clr-100;
+                            }
+
+                            img{
+                                display: inline;
+                            }
+                            .active-icon{
+                                transform: rotateZ(180deg);
+                            }
+                        }
+                        .active-link{
+                            color:$clr-200;
+                            font-weight: 700;
+                        }
+                        
+                        p{
+                            display: none;
+                            @include text($clr-600,white,inherit);
+                            padding-bottom: 1rem;
+                        }
+                        .active{
+                            display: block;   
+                        }
+                    }
+                }
+            }
+        }
+    }
+

@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+/* Make images easier to work with */
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(238deg, 29%, 16%);
+  background: linear-gradient(45deg, hsl(240deg, 73%, 65%), hsl(273deg, 75%, 66%));
+  text-align: start;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+body main {
+  background-color: white;
+  width: 85%;
+  border-radius: 1.5rem;
+  margin-top: 8rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 700px) {
+  body main {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0;
+    width: 60%;
+  }
+}
+body main picture {
+  position: relative;
+}
+@media (min-width: 700px) {
+  body main picture {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0;
+    overflow: hidden;
+  }
+}
+body main picture .pattern-mb {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 75%;
+}
+@media (min-width: 700px) {
+  body main picture .pattern-mb {
+    display: none;
+  }
+}
+body main picture .pattern-dt {
+  display: none;
+}
+@media (min-width: 700px) {
+  body main picture .pattern-dt {
+    display: block;
+    position: absolute;
+    width: 180%;
+    bottom: -27%;
+    left: -96%;
+  }
+}
+body main picture .woman {
+  position: absolute;
+  width: 75%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+@media (min-width: 700px) {
+  body main picture .woman {
+    width: 100%;
+    top: 46%;
+    left: -17%;
+    transform: translate(0, -50%);
+  }
+}
+body main .box {
+  display: none;
+}
+@media (min-width: 700px) {
+  body main .box {
+    display: block;
+    position: absolute;
+    left: -13%;
+    top: 35%;
+  }
+}
+body main section {
+  padding-bottom: 2rem;
+  border-radius: 1.5rem;
+}
+@media (min-width: 700px) {
+  body main section {
+    color: hsl(238deg, 29%, 16%);
+    background: inherit;
+    text-align: start;
+    padding: 2rem 4.3rem 4rem 0rem;
+  }
+}
+body main section h1 {
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(238deg, 29%, 16%);
+  background: inherit;
+  text-align: center;
+  padding: 7rem 0 1rem;
+}
+@media (min-width: 700px) {
+  body main section h1 {
+    color: hsl(238deg, 29%, 16%);
+    background: inherit;
+    text-align: start;
+    padding: 0;
+  }
+}
+body main section ul {
+  padding-inline: 1.6rem;
+}
+@media (min-width: 700px) {
+  body main section ul {
+    padding: 0;
+  }
+}
+body main section ul li {
+  border-bottom: 1px solid hsl(240deg, 5%, 91%);
+}
+body main section ul li a {
+  color: hsl(237deg, 12%, 33%);
+  background: white;
+  text-align: start;
+  padding-block: 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr 10px;
+  align-items: center;
+}
+body main section ul li a:hover {
+  color: hsl(14deg, 88%, 65%);
+}
+body main section ul li a img {
+  display: inline;
+}
+body main section ul li a .active-icon {
+  transform: rotateZ(180deg);
+}
+body main section ul li .active-link {
+  color: hsl(238deg, 29%, 16%);
+  font-weight: 700;
+}
+body main section ul li p {
+  display: none;
+  color: hsl(240deg, 6%, 50%);
+  background: white;
+  text-align: inherit;
+  padding-bottom: 1rem;
+}
+body main section ul li .active {
+  display: block;
+}/*# sourceMappingURL=style.min.css.map */
